@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
+    p{
+        color: whitesmoke;
+    }
+
+    #solar-system {
+      position: absolute;
+      top: 22%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    #sun {
+      position: absolute;
+      margin-top: 210px;
+    }
+
+    .sun {
+      width: 118px;
+      height: 118px;
+      background-color:
+        yellow;
+      border-radius: 50%;
+      box-shadow: 0 0 3em white;
+      top: 9%;
+      left: 9%;
+      position: relative;
+    }
+
+    .mercury {
+      width: 20px;
+      height: 20px;
+      background-color: rgb(171, 158, 163);
+      top: 122px;
+      left: 11%;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .mercury-orbit {
+      content: "";
+      position: absolute;
+      border: solid 2px rgb(171, 158, 163);
+      width: 170px;
+      height: 170px;
+      top: 198px;
+      left: -16px;
+      border-radius: 50%;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 11s;
+      -moz-animation-duration: 11s;
+    }
+
+    .venus {
+      width: 44px;
+      height: 44px;
+      background-color: rgb(254, 152, 0);
+      top: 140px;
+      left: 192px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .venus-orbit {
+      content: "";
+      position: absolute;
+      border: solid 2px rgb(254, 152, 0);
+      width: 220px;
+      height: 220px;
+      top: 172px;
+      left: -40px;
+      border-radius: 50%;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 12s;
+      -moz-animation-duration: 12s;
+    }
+
+    .earth {
+      width: 46px;
+      height: 46px;
+      background-color: rgb(45, 82, 182);
+
+      top: -32px;
+      left: 124px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .earth-orbit {
+      content: "";
+      position: absolute;
+      width: 308px;
+      height: 308px;
+      border: solid 2px rgb(45, 82, 182);
+      top: 130px;
+      left: -82px;
+      border-radius: 50%;
+
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 13s;
+      -moz-animation-duration: 13s;
+    }
+
+    .mars {
+      width: 25px;
+      height: 25px;
+      background-color: rgb(201, 4, 0);
+      top: 86px;
+      left: 12px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .mars-orbit {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border: solid 2px blueviolet;
+      top: 88px;
+      left: -124px;
+      border-radius: 50%;
+
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 14s;
+      -moz-animation-duration: 14s;
+    }
+    .jupitor {
+      width: 56px;
+      height: 56px;
+      background-color:palevioletred;
+      top: 50px;
+      left: 12px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .jupitor-orbit {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border: solid 2px rgb(201, 4, 0);
+      top: 45px;
+      left: -170px;
+      border-radius: 50%;
+
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 16s;
+      -moz-animation-duration: 16s;
+    }
+
+    .saturn {
+      width: 56px;
+      height: 56px;
+      background-color:skyblue;
+      top: 60px;
+      left: 12px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .saturn-orbit {
+      content: "";
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      border: solid 2px green;
+      top: -2px;
+      left: -220px;
+      border-radius: 50%;
+
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 12s;
+      -moz-animation-duration: 12s;
+    }
+
+    .uranus {
+      width: 56px;
+      height: 56px;
+      background-color:aquamarine;
+      top: 90px;
+      left: 12px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .uranus-orbit {
+      content: "";
+      position: absolute;
+      width: 680px;
+      height: 680px;
+      border: solid 2px greenyellow;
+      top: -53px;
+      left: -270px;
+      border-radius: 50%;
+
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 15s;
+      -moz-animation-duration: 15s;
+    }
+
+    .neptune {
+      width: 56px;
+      height: 56px;
+      background-color:darkblue;
+      top: 120px;
+      left: 12px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .neptune-orbit {
+      content: "";
+      position: absolute;
+      width: 780px;
+      height: 780px;
+      border: solid 2px gold;
+      top: -98px;
+      left: -320px;
+      border-radius: 50%;
+
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-name: orbit;
+      -webkit-animation-duration: 10s;
+      -moz-animation-duration: 10s;
+    }
+
+
+    @-webkit-keyframes orbit {
+      from {
+        transform: rotate(0deg)
+      }
+      to {
+        transform: rotate(360deg)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="solar-system">
+    <div class="neptune-orbit">
+        <div class="neptune"><p>Neptune</p></div>
+      </div>
+    <div class="uranus-orbit">
+        <div class="uranus"><p>Uranus</p></div>
+      </div>
+    <div class="saturn-orbit">
+        <div class="saturn"><p>Saturn</p></div>
+      </div>
+    <div class="jupitor-orbit">
+        <div class="jupitor"><p>Jupitor</p></div>
+      </div>
+
+
+    <div class="mars-orbit">
+      <div class="mars"><p>Mars</p></div>
+    </div>
+
+    <div class="earth-orbit">
+      <div class="earth"><p>Earth</p></div>
+    </div>
+
+    <div id="sun">
+      <div class="sun"><p style="margin-left: 50px;color: black;">Sun</p></div>
+    </div>
+
+    <div class="mercury-orbit">
+      <div class="mercury"><p>Mercury</p></div>
+    </div>
+
+    <div class="venus-orbit">
+      <div class="venus"><p>Venus</p></div>
+    </div>
+
+  </div>
+</body>
+</html>
